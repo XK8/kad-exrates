@@ -14,6 +14,6 @@ class CurrencyController extends Controller
 
     public function show(Rate $rate)
     {
-        return response()->json($rate);
+        return response()->json($rate->only(['id', 'alphabetic_code', 'name', 'english_name', 'digit_code', 'rate']));
     }
 }
